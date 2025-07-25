@@ -23,7 +23,7 @@ app.use('/api/appointments', appointmentRoutes);
 app.use(express.static(path.join(__dirname, 'dist')));
 
 //Redirect all unmatched routes to index.html (for react Router)
-app.get('*', (req, res)=>{
+app.all('/{*any}', (req, res)=>{
     res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
