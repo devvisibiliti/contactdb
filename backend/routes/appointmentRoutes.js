@@ -15,13 +15,13 @@ router.post('/', async (req, res) => {
 });
 
 // Get All Appointments (Admin panel)
-router.get('/', async (req, res) => {
-  try {
-    const appointments = await Appointment.find().sort({ createdAt: -1 });
-    res.json(appointments);
-  } catch (error) {
-    res.status(500).json({ message: 'Failed to fetch appointments' });
-  }
-});
+// router.get('/', async (req, res) => {
+//   try {
+//     const appointments = await Appointment.find().sort({ createdAt: -1 });
+//     res.json(appointments);
+//   } catch (error) {
+//     res.status(500).json({ message: 'Failed to fetch appointments' });
+//   }
+// });
 
 export default router;
